@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>宏观资金面看板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-page:#f7f4ed; --bg-card:#ffffff; --bg-sidebar:#1d1a17;
+  --ink:#1a1714; --ink-2:#3d3a35; --muted:#7a766e; --line:#e5e0d2;
+  --hdl-red:#a8201a;
+  --serif:'Noto Serif SC',serif; --sans:'Noto Sans SC',sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg-page);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.layout{display:flex;min-height:100vh}
+.sidebar{flex:0 0 210px;background:var(--bg-sidebar);color:#e8e4da;padding:26px 18px;position:sticky;top:0;height:100vh}
+.brand{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:4px}
+.brand-sub{font-size:11px;color:#a8a49c;margin-bottom:22px}
+.nav-group{font-size:10.5px;color:#8a857a;letter-spacing:.08em;margin:18px 0 6px;text-transform:uppercase}
+.nav-item{display:block;padding:8px 10px;border-radius:6px;color:#cfcabe;font-size:13px;margin-bottom:3px}
+.nav-item:hover{background:#2a2622;color:#fff}
+.main{flex:1;padding:30px 34px 50px;max-width:1180px}
+.page-title{font-family:var(--serif);font-size:26px;font-weight:700;margin:0 0 6px}
+.page-meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{display:block;background:var(--bg-card);border:1px solid var(--line);border-radius:10px;padding:22px 24px;transition:box-shadow .15s}
+.card:hover{box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.card .t{font-family:var(--serif);font-size:19px;font-weight:700;margin-bottom:6px}
+.card .t .arrow{color:var(--hdl-red);margin-left:6px}
+.card .d{font-size:13px;color:var(--ink-2);margin-bottom:8px}
+.card .m{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.note{margin-top:26px;font-size:12px;color:var(--muted)}
+.note .mono{font-family:var(--mono)}
+</style>
+</head>
+<body>
+<div class="layout">
+  <div class="sidebar">
+    <div class="brand">宏观资金面看板</div>
+    <div class="brand-sub">宏观 · 资金面 · 债券 · 汇率 · 商品</div>
+    <div class="nav-group">模块</div>
+    <a class="nav-item" href="macro.html">宏观经济指标</a>
+    <a class="nav-item" href="daily.html">每日资金面</a>
+    <div class="nav-item" style="color:#6b675f;cursor:not-allowed">全球宏观（预留）</div>
+  </div>
+  <div class="main">
+    <h1 class="page-title">宏观资金面看板</h1>
+    <div class="page-meta"></div>
+    <div class="grid">
+      <a class="card" href="macro.html">
+        <div class="t">宏观经济指标<span class="arrow">→</span></div>
+        <div class="d">月度 / 季度 / 年度低频指标，含历史分位与趋势。</div>
+        <div class="m">16 项指标 · 11 项真实数据</div>
+      </a>
+      <a class="card" href="daily.html">
+        <div class="t">每日资金面<span class="arrow">→</span></div>
+        <div class="d">资金 / 债券 / 汇率 / 商品 / 权益日度高频，含异常提醒。</div>
+        <div class="m">21 项指标 · 12 项真实数据</div>
+      </a>
+    </div>
+    <div class="note">数据抓取：2026-08-08 11:10:23 · 最近成功更新 2026-08-08T11:06:47+08:00</div>
+  </div>
+</div>
+</body>
+</html>
